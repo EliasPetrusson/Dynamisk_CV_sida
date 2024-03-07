@@ -6,11 +6,13 @@ fetch('cv.json')
     return response.json();
   })
   .then(data => {
+    
     document.querySelector('.uno').innerHTML = `
       <h1>${data.name}</h1>
       <p>${data.contact.phone} | ${data.contact.email}</p>
       <p>${data.summary}</p>
     `;
+   
    
     const workExperienceSection = document.querySelector('.dos');
     data.workExperience.forEach(job => {
@@ -25,6 +27,7 @@ fetch('cv.json')
       workExperienceSection.appendChild(jobElement);
     });
 
+   
     const skillsSection = document.querySelector('.tres');
     data.skills.work.forEach(category => {
       const categoryElement = document.createElement('div');
@@ -37,6 +40,7 @@ fetch('cv.json')
       skillsSection.appendChild(categoryElement);
     });
 
+   
     const languagesElement = document.createElement('div');
     languagesElement.innerHTML = `
       <h3>SPRÅK</h3>
