@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+    <header class="lilita-one-regular">
+        <h1>PORTFOLIO</h1>
+
+            <!---Navigation meny-->
+        <nav>
+            <ul>
+                <li><a href="../index.html">HEM</a></li>
+                <li><a href="../om_mig/jag.html">OM MIG</a></li>
+                <li><a href="../cv/cv.html">CV</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="../blogg/blogg.html">BLOGG</a></li>
+            </ul>
+        </nav>
+            <!---Navigation meny-->
+    </header> 
+
+    <hr>
+
+    
+    <main>
+        <div id="repos" class="repos">
+            <h2>My GitHub Repositories</h2>
+            <div class="repo-list"></div>
+        </div>
+    </main>
+
+    
+    <hr class="footer-line">
+    <footer>    
+        <p id="footer-text">&copy; 2024 Elias Petrusson.</p>
+    </footer>
+   
+
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script>
+        // Hämta repo
+        async function fetchAndRenderRepos() {
+            try {
+                const response = await fetch('https://api.github.com/users/EliasPetrusson/repos');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch repositories');
+                }
+                const data = await response.json();
+                renderRepos(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                // felmed.
+                document.getElementById('repos').innerHTML = '<p>Error fetching repositories</p>';
+            }
+        }
+
+        
+        function renderRepos(repos) {
+            const repoList = document.querySelector('.repo-list');
+            repoList.innerHTML = repos.map(repo => `
+                <div class="repo-item">
+                    <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
+                        <div class="repo-image">
+                            <img src="./plat.PNG" alt="Repo" /> 
+                        </div>
+                        <div class="repo-text">
+                            <h3>${repo.name}</h3>
+                            <p>${repo.description || 'No description available'}</p>
+                        </div>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+      
+        window.onload = fetchAndRenderRepos;
+    </script>
+   
+
+</body>
+</html>

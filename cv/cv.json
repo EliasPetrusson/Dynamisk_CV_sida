@@ -1,0 +1,63 @@
+{
+  "name": "Elias Petrusson",
+  "contact": {
+    "phone": "073-388 29 25",
+    "email": "elias.petrusson13@gmail.com"
+  },
+  "summary": "Har under många år samlat erfarenhet från många olika ställen och trots att jag bara är 22 år. I samband med det har jag utvecklat min sociala förmåga, min förmåga till problemlösning och samarbete. Jag är otroligt intresserad av teknik, nätverk och hårdvara och har anpassat min utbildning efter det. Jag har även starka grunder inom informationsteknik och data.",
+  "workExperience": [
+    {
+      "title": "IT konsult",
+      "company": "Sundsvalls IT & Automation AB",
+      "responsibilities": [
+        "Arbetat som IT Konsult åt Sundsvalls IT & Automation",
+        "Konfigurerat nätverksutrustning dagligen, felsökt nätverksproblem",
+        "Kan angripa nya problem och hitta lösningar till dessa",
+        "Blivit kunnig om HP och Cisco switchar, därav även fått upp intresset för programmering"
+      ]
+    },
+    {
+      "title": "1st-line/2nd-line tekniker",
+      "company": "GDM",
+      "responsibilities": [
+        "Arbetar som IT Servicedesk konsult åt Permobil och tidigare SCA",
+        "Utvecklat kunskaper inom IT problemlösning, ITIL, SLA",
+        "Förmågor för felsökning och hjälpa kunder över telefon/i person",
+        "Blivit väldigt bekant med office, It-tjänster, administration av servrar, administration av sekretessbelagda uppgifter"
+      ]
+    },
+    {
+      "title": "Processoperatör",
+      "company": "SCA Ortviken",
+      "responsibilities": [
+        "Hade ett ansvar för att pappersmaskin LWC1 skulle producera papper dygnet runt.",
+        "Blev snabbt självgående och fick tillit att köra min del av maskinen själv",
+        "Hade eget ansvar att transportera pappersrullar med taktravers",
+        "Klarar av att hantera stora uppgifter på egen hand (efter upplärning)",
+        "Arbetade 12 timmars skift, dag och natt"
+      ]
+    }
+  ],
+  "skills": {
+    "work": [
+      {
+        "category": "ARBETE",
+        "items": [
+          {"name": "Jira/remedy ", "level": "■■■■□"},
+          {"name": "Office 365 ", "level": "■■■■□"}
+        ]
+      },
+      {
+        "category": "PERSONLIGA",
+        "items": [
+          {"name": "Problemlösning ", "level": "■■■■□"},
+          {"name": "Organisatoriska ", "level": "■■■■■"}
+        ]
+      }
+    ],
+    "languages": [
+      {"name": "Engelska ", "level": "■■■■■"},
+      {"name": "Svenska ", "level": "■■■■■"}
+    ]
+  }
+}
